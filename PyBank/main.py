@@ -48,3 +48,13 @@ with open(csvpath) as csvfile:
     print("Average Change: " + str(averageProfit))
     print("Greatest Increase in Profits: " + greatestProfitDate + " " + str(greatestProfit))
     print("Greatest Decrease in Profits: " + greatestLossDate + " " + str(greatestLoss))
+
+file = open("output.txt","w")
+file.write("Financial Analysis\n")
+file.write("----------------------------" + "\n")
+file.write("Total Months: " + str(totalMonths) + "\n")
+file.write("Total: " + str(netProfit) + "\n")
+file.write("Average Change: " + str(averageProfit) + "\n")
+file.write("Greatest Increase in Profits: " + greatestProfitDate + " " + str(greatestProfit) + "\n")
+file.write("Greatest Decrease in Profits: " + greatestLossDate + " " + str(greatestLoss) + "\n")
+file.close()
